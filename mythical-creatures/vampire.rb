@@ -1,22 +1,40 @@
 class Vampire
-  attr_reader :name,
-              :pet,
-              :thirsty
+  attr_writer :name
+              # :pet
 
-def initialize (name, pet = "bat", thirsty = true)
-  @name = name
-  @pet  = pet
-  @thirsty = thirsty
+  def initialize(name, pet = "bat")
+    @name = name
+    @pet = pet
+    @thirsty = "hello"
+  end
 
-end
+  def thirsty?
+    @thirsty
+  end
 
-def thirsty?
-@thirsty
-end
+  def drink
+    @thirsty = "goodbye"
+  end
 
-def drink
-  @thirsty = false
-end
+  def pet=(poop)
+    @pet = poop
+  end
+
+  def pet
+    @pet
+  end 
+
+  # def name
+  #   puts "inside_name"
+  #   @name
+  # end
+  #
+  # def name=(poop)
+  #   puts "inside_set_bar"
+  #   @name = poop
+  # end
+
+
 
 
 end

@@ -10,7 +10,6 @@ class VampireTest < Minitest::Test
   end
 
   def test_it_is_named_something_else
-
     vampire = Vampire.new("Vladimir")
     assert_equal "Vladimir", vampire.name
   end
@@ -22,20 +21,18 @@ class VampireTest < Minitest::Test
   end
 
   def test_it_can_have_other_pets
-
     vampire = Vampire.new("Varney", "fox")
     assert_equal "fox", vampire.pet
   end
 
   def test_it_is_thirsty_by_default
-
     vampire = Vampire.new("Count von Count")
     assert vampire.thirsty?
   end
 
   def test_it_is_not_thirsty_after_drinking
-    
     vampire = Vampire.new("Elizabeth Bathory")
+    require "pry"; binding.pry
     vampire.drink
     refute vampire.thirsty?
   end
